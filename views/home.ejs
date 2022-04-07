@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title> TO-DO App </title>
+
+    <link rel="stylesheet" href="/css/home.css">
+    <!-- fontawesome for some icon-->
+    <script src="https://kit.fontawesome.com/623be7c2b8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- To do box where all things are group -->
+    <section id="app-box">
+        <!-- App Title -->
+        <h1 class="text-color" id="title">TO-DO App</h1>
+
+        <div class="horizontal-line"></div>
+
+        <!-- add new task form -->
+        <form action="/work/add-task" method="POST">
+            <!-- box for description input -->
+            <div id="desc">
+                <label for="desc-input"> description </label>
+                <input type="text" name="description" id="desc-input" placeholder="What you want to do?" required>
+            </div>
+
+            <div class="horizontal-line"></div>
+
+            <!-- Div box for data inputs -->
+            <div id="data-box">
+                <!-- div box for category selection option -->
+                <div id="category-box">
+                    <label for="category"> Category </label>
+
+                    <select name="category" id="category">
+                        <option value="n/a"> Category </option>
+                        <option value="personal">Personal</option>
+                        <option value="Office">Office</option>
+                        <option value="work">Work</option>
+                        <option value="Housework">Housework</option>
+                        <option value="college">College</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="vertical-line"></div>
+
+                <!-- date input -->
+                <div id="date-box">
+                    <div>
+                        <label for="date"> Deadline </label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                </div>
+            </div>
+            <div class="horizontal-line"></div>
+
+            <!-- add and delete Buttons -->
+            <div id="buttons-box">
+
+                <!-- button to add a new work and sumbit form -->
+                <button id="add-button" type="submit">
+                    <i class="fa-solid fa-square-plus"></i>
+                    <span>Add Task</span>
+                </button>
+
+                <!-- button to delete all the selected compeleted work -->
+                <button id="delete-button" type="submit" form="tasks-list-form">
+                    <i class="fa-solid fa-trash-can"></i>
+                    <span>Delete Tasks</span>
+                </button>
+            </div>
+
+        </form>
+
+        <!-- this is the box for showing all the tasks list -->
+        <form action="/work/delete-task" method="POST" id="tasks-list-form">
+            <% for(let i of work_list){%>
+                <div>
+                    <div class="horizontal-line"></div>
+                    <div class="task">
+                        <input id="check" type="checkbox" name="id" value="<%= i.id %>">
+                        <div class="task-data">
+                            <p>
+                                <%= i.description %>
+                            </p>
+
+                            <i class="fa-solid fa-calendar-week"></i>
+                            <span>
+                                <%= i.date %>
+                            </span>
+                        </div>
+                        <button type="button">
+                            <%= i.category %>
+                        </button>
+                    </div>
+                </div>
+                <%}%>
+
+        </form>
+    </section>
+
+    <script type="text/javascript" src="/js/home.js"></script>
+
+</body>
+
+</html>

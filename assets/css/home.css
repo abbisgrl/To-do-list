@@ -1,0 +1,187 @@
+
+/* costumization of body section*/
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: linear-gradient(#355C7D,#6C5B7B,#C06C84)
+    
+}
+/*app box styles*/
+#app-box{
+    background-color:#B5C588;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+/* app title costumization */
+#title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Times, serif;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+/* Customization for labels of input fields */
+label{
+    color: rgb(95, 93, 93);
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: small;
+    font-weight: 900;
+    padding: 15px;
+}
+
+.text-color{
+    color:rgb(95, 93, 93);
+}
+
+/* horizontal line  */
+.horizontal-line{
+    width: 100%;
+    height: 4px;
+    background-color: rgb(134, 134, 134);
+}
+/* vertical line  */
+.vertical-line{
+    width: 4px;
+    height: auto;
+    background-color: rgb(134, 134, 134);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Various Customizations for description input box of app*/
+#desc{
+    margin-top: 5px;
+}
+
+#desc-input{
+    width: 100%;
+    border: none;
+    margin: 4px 0px 15px 0px;
+    padding: 7px 15px;
+    outline: none;
+}
+#desc-input:focus {
+    border: 2px solid orangered;
+}
+/*  data box which include category and date*/
+#data-box{
+    display: flex;
+    flex-direction: row;
+}
+/* Category Styling */
+#category-box{
+    flex-grow: 1;
+    margin-top: 5px;
+}
+#category{
+    width: 100%;
+    border: none;
+    margin: 0px 0px 15px 0px;
+    padding: 5px 15px;
+    outline: none;
+    background-color: white;
+    color:rgb(119, 116, 116);
+    font-weight: bold;
+}
+#category:focus {
+    border: 2px solid orangered;
+}
+/* date styling*/
+#date{
+    width: 100%;
+    border: none;
+    margin: 0px 0px 15px 0px;
+    padding: 5px 15px;
+    outline: none;
+    background-color: white;
+    color:rgb(119, 116, 116);
+    font-weight: bold;
+}
+#date:focus {
+    border: 2px solid orange;
+}
+#date-box{
+    flex-grow: 1;
+    margin-top: 5px;
+}
+/* 'add' and 'delete' buttons */
+#buttons-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 25px 0px;
+}
+#buttons-box button *{
+    color: white;
+}
+#buttons-box button{
+    border: none;
+    outline: none;
+    width: 130px;
+    padding: 15px 0px;
+}
+#buttons-box button span{
+    text-transform: uppercase;
+}
+#add-button{
+    background-color:#1D7EB5;
+    margin-right: 5px;
+}
+#delete-button{
+    background-color:#E60023;
+    margin-left: 5px;
+}
+/* Set hover property applied to all buttons */
+button:hover{
+    background-color: orange !important;
+}
+
+/* Customizations of  all the work list in the app */
+#tasks-list-form{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    border: 10px solid #B5C588;
+    ;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.task{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.task button{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 100px;
+    color: grey;
+    text-transform: uppercase;
+}
+.task-data p{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.task-data span{
+    font-size: small;
+}
+
+.task > *{
+    margin-right: 20px;
+}
+.task-data{
+    display: inline-block;
+    width: 70%;
+}
+.task-data *{
+    color:rgb(119, 116, 116);
+    font-family: Arial, Helvetica, sans-serif;
+}
